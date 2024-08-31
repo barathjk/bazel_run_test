@@ -1,8 +1,5 @@
-load("@pip_install_package//:requirements.bzl", "requirement")
-load("@rules_python//python:defs.bzl", "py_binary")
-
 py_binary(
-  name = "main",
-  srcs = ["main.py"],
-  deps = [requirement("requests")]
+    name = "main",
+    srcs = ["main.py"],
+    python_version = "PY3",  # Ensure the target uses Python 3
 )
