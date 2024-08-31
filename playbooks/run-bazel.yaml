@@ -1,6 +1,8 @@
 ---
 - hosts: all
   tasks:
+    - name: print hostname
+      command: hostname
     - name: Ensure Bazel is installed
       command: bazel --version
 
