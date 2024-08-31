@@ -10,3 +10,8 @@
       command: bazel build //:main # Adjust the Bazel command as needed
       args:
         chdir: "{{ zuul.project.src_dir }}"
+
+      - name: Run Bazel Run
+      command: bazel run //:main # Adjust the Bazel command as needed
+      args:
+        chdir: "{{ zuul.project.src_dir }}"
