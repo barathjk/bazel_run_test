@@ -10,5 +10,5 @@
     run: playbooks/run-bazel.yaml
     nodeset:
       nodes:
-        - name: ubuntu-bazel
-          label: ubuntu-jammy  # Adjust based on the node type
+        - name: ubuntu-jammy
+          label: ubuntu-jammy # Adjust based on the node type
