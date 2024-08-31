@@ -1,0 +1,14 @@
+---
+- project:
+    gh_check:
+      jobs:
+        - bazel-build
+
+- job:
+    name: bazel-build
+    description: "Run Bazel build"
+    run: playbooks/run-bazel.yaml
+    nodeset:
+      nodes:
+        - name: ubuntu-bazel
+          label: ubuntu-jammy  # Adjust based on the node type

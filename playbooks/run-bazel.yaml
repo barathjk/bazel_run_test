@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Ensure Bazel is installed
+      command: bazel --version
+
+    - name: Run Bazel build
+      command: bazel build //:main # Adjust the Bazel command as needed
+      args:
+        chdir: "{{ zuul.project.src_dir }}"
