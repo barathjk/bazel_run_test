@@ -16,6 +16,7 @@
           - apt-transport-https
           - curl
           - gnupg
+          - python3-pip
         state: present
         force_apt_get: yes
 
@@ -44,6 +45,9 @@
         state: present
         force_apt_get: yes
 
+    - name: Install pandas to python3
+      command: python3 -m pip install pandas
+
     - name: Run Bazel build
       command: bazel build //:main # Adjust the Bazel command as needed
       args:
@@ -53,3 +57,6 @@
       command: bazel run //:main # Adjust the Bazel command as needed
       args:
         chdir: "{{ zuul.project.src_dir }}"
+
+    - name: Install pandas to python3
+      command: python3 -m pip install pandas
