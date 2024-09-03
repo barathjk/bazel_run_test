@@ -20,10 +20,10 @@
         force_apt_get: yes
 
     - name: Add Bazel's GPG key
-      command: curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
+      command: curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor -o /tmp/bazel-archive-keyring.gpg
 
     - name: Move the GPG key to the keyrings directory
-      command: mv bazel-archive-keyring.gpg /usr/share/keyrings/
+      command: mv /tmp/bazel-archive-keyring.gpg /usr/share/keyrings/
 
     - name: Add Bazel's repository to the sources list
       apt_repository:
