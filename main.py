@@ -4,7 +4,7 @@ import pandas as pd
 def main():
     data = {
         'Name': ['Barath', 'Susanth', 'Naren'],
-        'Age': [24, 7, 10]
+        'Age': [24, 7, 11]
     }
     df = pd.DataFrame(data)
     print(df)
