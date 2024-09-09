@@ -2,6 +2,8 @@
     name: bazel-build
     description: "Run Bazel build"
     run: playbooks/run-bazel.yaml
+    outputs:
+      artifacts: "{{ zuul.project.src_dir }}"
     nodeset:
       nodes:
         - name: ubuntu-jammy
