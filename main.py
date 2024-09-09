@@ -8,6 +8,7 @@ def main():
     }
     df = pd.DataFrame(data)
     print(df)
+    df.to_excel("Quality_output.xlsx")
 
 if __name__ == "__main__":
     main()
