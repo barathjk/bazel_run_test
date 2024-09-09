@@ -53,12 +53,6 @@
       args:
         chdir: "{{ zuul.project.src_dir }}"
 
-    - name: Output
-      command: ls #
-      outputs:
-        artifacts: "{{ zuul.project.src_dir }}"
-        chdir: "{{ zuul.project.src_dir }}"
-
     - name: Run Bazel Run
       command: bazel run //:main # Adjust the Bazel command as needed
       args:
