@@ -48,6 +48,9 @@
     - name: Install pandas to python3
       command: python3 -m pip install pandas
 
+    - name: Install openpyxl to python3
+      command: python3 -m pip install openpyxl
+
     - name: Run Bazel build
       command: bazel build //:main # Adjust the Bazel command as needed
       args:
